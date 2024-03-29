@@ -1,0 +1,43 @@
+# Ignore vendor directory for Laravel
+/vendor/
+
+# Ignore node_modules directory for React
+/node_modules/
+
+# Ignore environment file for Laravel
+.env
+
+# Ignore compiled CSS for React
+/build/
+
+# Ignore dependencies installed via npm or yarn for React
+/yarn.lock
+/package-lock.json
+
+# Ignore Mac system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Ignore local configuration file
+/.env.local
+/.env.development.local
+/.env.test.local
+/.env.production.local
+
+# Ignore cache and session directories for Laravel
+/bootstrap/cache/
+/storage/framework/cache/
+/storage/framework/sessions/
+
+# Ignore compiled views for Laravel
+/storage/framework/views/
+
+# Ignore Mix manifest file for Laravel
+/public/mix-manifest.json
+
+# Ignore Mix compiled files for Laravel
+/public/css/
+/public/js/
