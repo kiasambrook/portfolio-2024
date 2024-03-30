@@ -18,7 +18,7 @@ const Banner = () => {
                 basic information about me and what I do. Currently this is
                 placeholder text. I want it to have around 50-100 words here...
               </p>
-              <a href="" className="text-red-500 link w-full hover:underline">
+              <a href="" className="text-red-500 link w-full hover:underline" aria-label="See my previous projects.">
                 See my projects
                 <svg
                   className="inline w-4 h-4 ms-2 rtl:rotate-180 animate-bounce-x"
@@ -47,6 +47,7 @@ const Banner = () => {
               <span className="text-gray-400 flex lg:flex-col">
                 <a
                   href="https://github.com/kiasambrook"
+                  aria-label="Visit my GitHub page"
                   target="_blank"
                   className="hover:text-black dark:hover:text-white"
                 >
@@ -55,6 +56,7 @@ const Banner = () => {
                 <a
                   href="https://www.linkedin.com/in/kiasambrook"
                   target="_blank"
+                  aria-label="Visit my personal Linkedin page"
                   className="hover:text-blue-500"
                 >
                   <Linkedin className="w-10 h-10" />
