@@ -2,6 +2,14 @@ import React from "react";
 import CurlyArrow from "./../svgs/curly";
 import GitHub from "./../svgs/github";
 import Linkedin from "./../svgs/linkedin";
+import gsap from 'gsap'
+import ScrollToPlugin from "gsap/ScrollToPlugin";
+
+gsap.registerPlugin(ScrollToPlugin)
+
+const scrollToProjects = () => {
+  gsap.to(window, {duration: 0.5, scrollTo:{y:"#projects", autoKill: true}});
+}
 
 const Banner = () => {
   return (
@@ -18,7 +26,7 @@ const Banner = () => {
                 basic information about me and what I do. Currently this is
                 placeholder text. I want it to have around 50-100 words here...
               </p>
-              <a href="" className="text-red-500 link w-full hover:underline" aria-label="See my previous projects.">
+              <p onClick={scrollToProjects} className="text-red-500 cursor-pointer link w-full hover:underline" aria-label="See my previous projects.">
                 See my projects
                 <svg
                   className="inline w-4 h-4 ms-2 rtl:rotate-180 animate-bounce-x"
@@ -29,13 +37,13 @@ const Banner = () => {
                 >
                   <path
                     stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M1 5h12m0 0L9 1m4 4L9 9"
                   />
                 </svg>
-              </a>
+              </p>
             </div>
           </div>
         </div>
