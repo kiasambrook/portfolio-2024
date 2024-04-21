@@ -16,7 +16,7 @@ const ProjectList = () => {
       scrollTrigger: {
         trigger: container.current,
         start: 'top top',
-        end: "bottom 150px",
+        end: "bottom 300px",
         pin: left.current, // Change 'pin' to 'true'
       }
     });
@@ -24,7 +24,7 @@ const ProjectList = () => {
 
 
   return (
-    <div className="bg-cyan-50 h-min-screen h-screen py-32 projects" id="projects" ref={container}>
+    <div className="bg-cyan-50 h-min-screen py-32 projects" id="projects" ref={container}>
     <div className="container text-black flex justify-between">
       <div id="projects-left" ref={left}>
         <h3 className="text-4xl font-semibold w-1/4">My Projects</h3>
