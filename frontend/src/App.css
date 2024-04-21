@@ -25,3 +25,20 @@
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
+
+.animated-svg {
+  width: 100%;
+  max-width: 500px; /* Adjust max-width as needed */
+}
+
+.animated-path {
+  stroke-dasharray: 1000; /* Length of the path */
+  stroke-dashoffset: 1000; /* Length of the path */
+  animation: draw 2s linear forwards; /* Adjust animation duration (5s in this case) */
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

@@ -4,6 +4,7 @@ import GitHub from "./../svgs/github";
 import Linkedin from "./../svgs/linkedin";
 import gsap from 'gsap'
 import ScrollToPlugin from "gsap/ScrollToPlugin";
+import TypeIt from "typeit-react";
 
 gsap.registerPlugin(ScrollToPlugin)
 
@@ -15,19 +16,20 @@ const Banner = () => {
   return (
       <div className="banner flex lg:flex-row flex-col py-40 mx-auto lg:mx-40 text-left content-between justify-between">
         <div className="left flex flex-wrap flex-col content-start items-start">
-          <h2 className="text-5xl font-black">
+          <TypeIt as={"h2"}
+          className="text-5xl font-black">
             Hi, I'm <span className="text-red-500">Kia</span>...
-          </h2>
+            <br />
+            Web Developer
+          </TypeIt>
           <div className="lg:flex lg:flex-row flex-col items-start lg:items-center">
-            <CurlyArrow className="text-white h-52 dark:fill-white fill-black rotate-100 min-w-fit lg:mr-32 mr-12 hidden lg:block" />
+            <CurlyArrow className="text-white h-52  rotate-100 min-w-fit lg:mr-32 mr-12 hidden lg:block" />
             <div className="max-w-full overflow-hidden">
               <p className="whitespace-normal break-words overflow-auto">
-                This is some example text that will eventually discuss some
-                basic information about me and what I do. Currently this is
-                placeholder text. I want it to have around 50-100 words here...
+                I am a stack web developer currently based in Wales. I specialise in PHP, but I like to dabble in JS including React and Typescript too.
               </p>
               <p onClick={scrollToProjects} className="text-red-500 cursor-pointer link w-full hover:underline" aria-label="See my previous projects.">
-                See my projects
+                Check out my existing projects
                 <svg
                   className="inline w-4 h-4 ms-2 rtl:rotate-180 animate-bounce-x"
                   aria-hidden="true"
