@@ -1,9 +1,21 @@
-import "./App.css";
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import { gsap } from "gsap";
 import Header from "./components/header/App";
 import ProjectList from "./components/projects/ProjectList";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import "./App.css";
+import TimelineApp from "./components/timeline/App";
+import {textToSpans, animation} from './util/formatting'
+
+gsap.registerPlugin(ScrollTrigger);
 
 function App() {
+  useEffect(() => {
+    textToSpans();
+    animation()
+  }, []);
+
   return (
     <div
       data-scroll-container

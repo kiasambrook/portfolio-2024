@@ -42,3 +42,28 @@
     stroke-dashoffset: 0;
   }
 }
+
+
+
+@keyframes spin{
+  50% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+
+.logo:nth-child(2) {
+  color: red;
+}
+
+.logo.animating {
+  span {
+  display: inline-block;
+  pointer-events: none;
+
+    &.spin{
+      animation: spin 0.5s 1;
+    }
+  }
+
+}
