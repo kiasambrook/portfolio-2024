@@ -25,6 +25,12 @@ function App() {
         <Header />
       </div>
       <ProjectList />
+
+      <TimelineApp />
+
+      <div className="bg-cyan-50 h-min-screen h-screen py-32">
+        <h1>TEST</h1>
+      </div>
     </div>
   );
 }

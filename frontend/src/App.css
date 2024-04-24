@@ -26,6 +26,125 @@
   }
 }
 
+
+/*section {
+  position: relative;
+}*/
+.section-timeline {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  overflow: hidden;
+  height: 100vh;
+
+}
+.test{
+  padding-top: 200px;
+}
+.timeline-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+/*   transition: 0.6s cubic-bezier(0.28, 0, 0.18, 1); */
+  padding-top: 100px;
+
+  padding-bottom: 100px;
+
+}
+.timeline-container article {
+  position: relative;
+    z-index: 1000;
+    color: white;
+    text-align: center;
+
+    display: flex;
+flex-direction: row ;
+flex-wrap: nowrap ;
+justify-content: center;
+align-items: center;
+align-content: center;
+
+}
+.timeline-container  article.year hgroup{
+/*  position: absolute;
+    top: 50%;
+    width: 90%;
+    left: 50%;
+        transform: translateY(-50%) translateX(-50%);*/
+}
+.timeline-container article.year {
+/*   transition: 0.6s cubic-bezier(0.28, 0, 0.18, 1) 0.3s; */
+  height: 100vh;
+  max-height: 3rem;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.timeline-container article.year hgroup h2 {
+/*   transition: 0.6s cubic-bezier(0.28, 0, 0.18, 1); */
+  line-height: 1;
+  margin: 0;
+}
+
+.timeline-container article.year hgroup p {
+  line-height: 1.5;
+  font-size: 1.25rem;
+  opacity: 0;
+  max-height: 0px;
+  max-width: 600px;
+  margin: 0 auto;
+/*   transition: opacity 0.6s cubic-bezier(0.28, 0, 0.18, 1); */
+}
+
+/*ACTIVE*/
+#section-timeline article.year.active {
+  max-height: 80vh;
+}
+/*#section-timeline article.year:after{
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 4px;
+  background: #ffffff;
+  height: 120px;
+  margin-top: -60px;
+  max-height: 0px;
+      transform: translateX(-50%) translateY(-100%);
+      transition: 0.3s cubic-bezier(0.28, 0, 0.18, 1);
+
+}*/
+#section-timeline article.year hgroup:after{
+  content: '';
+  position: absolute;
+  /*top: 100%;*/
+  top: 90%;
+  left: 50%;
+  width: 4px;
+  background: #ffffff;
+  height: 120px;
+
+  max-height: 0px;
+      transform: translateX(-50%) translateY(-100%);
+/*       transition: 0.3s cubic-bezier(0.28, 0, 0.18, 1);
+ */
+}
+#section-timeline article.year.active hgroup:after{
+/*   transition: 0.6s cubic-bezier(0.28, 0, 0.18, 1) 0.6s; */
+  max-height: 90px;
+}
+
+.timeline-container  article.year.active hgroup p {
+  opacity: 1 !important;
+  max-height: 100%;
+}
+
+
+
+
+
 .animated-svg {
   width: 100%;
   max-width: 500px; /* Adjust max-width as needed */

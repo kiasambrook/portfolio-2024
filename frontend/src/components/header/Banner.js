@@ -26,7 +26,7 @@ const Banner = () => {
             <CurlyArrow className="text-white h-52  rotate-100 min-w-fit lg:mr-32 mr-12 hidden lg:block" />
             <div className="max-w-full overflow-hidden">
               <p className="whitespace-normal break-words overflow-auto">
-                I am a stack web developer currently based in Wales. I specialise in PHP, but I like to dabble in JS including React and Typescript too.
+                I am a full stack web developer currently based in Wales. I specialise in PHP, but I like to dabble in JS including React and Typescript too.
               </p>
               <p onClick={scrollToProjects} className="text-red-500 cursor-pointer link w-full hover:underline" aria-label="See my previous projects.">
                 Check out my existing projects
