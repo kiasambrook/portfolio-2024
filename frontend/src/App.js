@@ -22,7 +22,7 @@ function App() {
       data-scroll-container
       className="text-black bg-cyan-50 dark:bg-gray-900 dark:text-white w-full box-border p-0 m-0"
     >
-      <DarkThemeToggle className="fixed top-1/4 dark:bg-gray-900 rounded-r-md rounded-l-none" />
+      <DarkThemeToggle className="fixed bottom-2.5 left-2.5 dark:border-cyan-50 border border-gray-900 dark:bg-gray-900 rounded-full z-50" />
       <Header />
       <ProjectList />
       <TimelineApp />
