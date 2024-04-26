@@ -18,13 +18,12 @@ const CurlyArrow = ({ className }) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 744.000000 1052.000000"
       preserveAspectRatio="xMidYMid meet"
-      className={`animated-svg ${className}`}
+      className={`animated-svg ${className} stroke-gray-900 dark:stroke-white`}
     >
       <g
         transform="translate(0.000000,1052.000000) scale(0.100000,-0.100000)"
-        stroke="white" // Set stroke color
-        strokeWidth="40" // Set stroke width
-        fill="none" // Set fill to none to only show the stroke
+        strokeWidth="40"
+        fill="none"
       >
         <path
           d="M3600 8377 c-14 -7 -29 -24 -34 -38 -6 -19 28 -240 133 -859 79 -458

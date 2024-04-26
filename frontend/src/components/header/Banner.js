@@ -23,7 +23,7 @@ const Banner = () => {
             Web Developer
           </TypeIt>
           <div className="lg:flex lg:flex-row flex-col items-start lg:items-center">
-            <CurlyArrow className="text-white h-52  rotate-100 min-w-fit lg:mr-32 mr-12 hidden lg:block" />
+            <CurlyArrow className="text-gray-900 dark:text-white h-52  rotate-100 min-w-fit lg:mr-32 mr-12 hidden lg:block" />
             <div className="max-w-full overflow-hidden">
               <p className="whitespace-normal break-words overflow-auto">
                 I am a full stack web developer currently based in Wales. I specialise in PHP, but I like to dabble in JS including React and Typescript too.
