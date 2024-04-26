@@ -41,6 +41,9 @@ const ProjectList = () => {
               { colour: "blue", text: "TailwindCSS" },
               { colour: "red", text: "Laravel" },
             ]}
+            description="Irure labore eu irure id. Consectetur anim tempor nisi excepteur velit duis pariatur. Proident duis laboris nisi aliquip nulla ut culpa eiusmod est est exercitation minim magna."
+            link="https://kiasambrook.co.uk"
+            repo="https://github.com/kiasambrook/portfolio-2024"
           />
           <Project
             title="Newry Wildlife"
@@ -49,6 +52,9 @@ const ProjectList = () => {
               { colour: "blue", text: "TailwindCSS" },
               { colour: "red", text: "Laravel" },
             ]}
+            description="Irure labore eu irure id. Consectetur anim tempor nisi excepteur velit duis pariatur. Proident duis laboris nisi aliquip nulla ut culpa eiusmod est est exercitation minim magna."
+            link="newrywildlife.co.uk"
+            repo="https://github.com/kiasambrook/dean-blog"
           />
           <Project
             title="Study Digs"
@@ -57,6 +63,8 @@ const ProjectList = () => {
               { colour: "blue", text: "TailwindCSS" },
               { colour: "red", text: "Laravel" },
             ]}
+            description="Irure labore eu irure id. Consectetur anim tempor nisi excepteur velit duis pariatur. Proident duis laboris nisi aliquip nulla ut culpa eiusmod est est exercitation minim magna."
+            repo="https://github.com/kiasambrook/studydigs-src"
           />
         </div>
       </div>

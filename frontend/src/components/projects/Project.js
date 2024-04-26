@@ -1,12 +1,30 @@
 import Badge from "./Badge";
+import { useState } from "react";
+import { Modal } from "flowbite-react";
 
-const Project = ({ title, img, badges }) => {
+const Project = ({ title, img, badges, description, link, repo }) => {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
-    <div className="project w-5/12 m-2">
-      <div className={"object-cover  rounded-md bg-[url('" + img + "')] my-2  h-48 relative"}>
-        <div className="absolute inset-0 bg-gray-700 opacity-60 rounded-md "></div>
-        <div className="absolute inset-0 flex items-center justify-center mix-blend-soft-light hover:mix-blend-normal">
-          <h2 className=" text-3xl font-bold">{title}</h2>
+    <>
+      <div className="project w-5/12 m-2">
+        <div
+          onClick={() => setOpenModal(true)}
+          style={{
+            backgroundImage: `url('${img}')`,
+            backgroundSize: "cover",
+            cursor: "pointer",
+            borderRadius: "0.5rem",
+            marginTop: "0.5rem",
+            height: "12rem",
+            position: "relative",
+          }}
+          className="my-2 h-48 relative"
+        >
+          <div className="absolute inset-0 bg-gray-700 opacity-60 rounded-md "></div>
+          <div className="absolute inset-0 flex items-center justify-center mix-blend-soft-light hover:mix-blend-normal">
+            <h2 className=" text-3xl font-bold">{title}</h2>
+          </div>
         </div>
         <div className="tags flex gap-2">
           {badges.map((badge, index) => (
@@ -14,7 +32,32 @@ const Project = ({ title, img, badges }) => {
           ))}
         </div>
       </div>
-    </div>
+
+      <Modal
+        show={openModal}
+        onClose={() => setOpenModal(false)}
+        dismissible
+        className="dark:text-white"
+      >
+        <Modal.Header>{title}</Modal.Header>
+        <Modal.Body>
+          <div className="space-y-6">{description}</div>
+        </Modal.Body>
+        <Modal.Footer className="flex flex-row gap-4 ">
+          <a
+            href={link}
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            target="_blank"
+            aria-label={`Link to ${title}`}
+          >
+            Site
+          </a>
+          <button href={repo}  class="bg-cyan-50 hover:bg-cyan-100 text-gray-900 font-bold py-2 px-4 rounded" target="_blank"  aria-label={`Link to Git Repo`}>
+            Git Repo
+          </button>
+        </Modal.Footer>
+      </Modal>
+    </>
   );
 };
 
