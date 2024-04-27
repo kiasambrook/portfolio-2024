@@ -36,34 +36,35 @@ const ProjectList = () => {
         <div className="projects flex justify-around w-3/4 flex-wrap ">
           <Project
             title="Portfolio"
-            img="https://picsum.photos/400/300"
+            img="./portfolio.png"
             badges={[
               { colour: "blue", text: "TailwindCSS" },
+              { colour: "cyan", text: "React" },
               { colour: "red", text: "Laravel" },
             ]}
-            description="Irure labore eu irure id. Consectetur anim tempor nisi excepteur velit duis pariatur. Proident duis laboris nisi aliquip nulla ut culpa eiusmod est est exercitation minim magna."
+            description="This is my personal portfolio website (the website you are currently on), and I built this site to try build on my frontend and laravel skills. It is still a WIP so check back regularly for any changes (although I'm working on the backend at the moment)!"
             link="https://kiasambrook.co.uk"
             repo="https://github.com/kiasambrook/portfolio-2024"
           />
           <Project
             title="Newry Wildlife"
-            img="https://picsum.photos/400/300"
+            img="./newry-wildlife.png"
             badges={[
               { colour: "blue", text: "TailwindCSS" },
-              { colour: "red", text: "Laravel" },
+              { colour: "gray", text: "Wordpress" },
             ]}
-            description="Irure labore eu irure id. Consectetur anim tempor nisi excepteur velit duis pariatur. Proident duis laboris nisi aliquip nulla ut culpa eiusmod est est exercitation minim magna."
-            link="newrywildlife.co.uk"
-            repo="https://github.com/kiasambrook/dean-blog"
+            description="Newry Wildlife is a Wordpress site that was built to advertise nature walks and workshops that take place in Newry, Northen Ireland. It has an API integration with Eventbrite which pulls down their latest events, and uses a custom post type to create posts on biodioversity. I am very familiar in working with Worpdress, using ACF, and working with custom post types and taxonomies, but, this project also gave me the oppurtunity to delve into Tailwind CSS as I was given freereign on the frontend."
+            link="https://newrywildlife.com"
+            repo="https://github.com/kiasambrook/Newry-Wildlife"
           />
           <Project
             title="Study Digs"
             img="https://picsum.photos/400/300"
             badges={[
-              { colour: "blue", text: "TailwindCSS" },
-              { colour: "red", text: "Laravel" },
+              { colour: "purple", text: "Bootstrap" },
+              { colour: "green", text: "PHP" },
             ]}
-            description="Irure labore eu irure id. Consectetur anim tempor nisi excepteur velit duis pariatur. Proident duis laboris nisi aliquip nulla ut culpa eiusmod est est exercitation minim magna."
+            description={`Study Digs is a student accommodation finder built for my final project at university. The aim of the site was to allow landlords to upload student properties to the site and students could filter by their unviersity to get all properties that were nearby. The site made API calls to geoencode the properties' and unviersities' locations and then calculated the distance a property was from the nearest universities. I was later awarded the "Best Web Based Major Project" award for this project from my university.`}
             repo="https://github.com/kiasambrook/studydigs-src"
           />
         </div>

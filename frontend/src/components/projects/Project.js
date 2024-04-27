@@ -22,8 +22,8 @@ const Project = ({ title, img, badges, description, link, repo }) => {
           className="my-2 h-48 relative"
         >
           <div className="absolute inset-0 bg-gray-700 opacity-60 rounded-md "></div>
-          <div className="absolute inset-0 flex items-center justify-center mix-blend-soft-light hover:mix-blend-normal">
-            <h2 className=" text-3xl font-bold">{title}</h2>
+          <div className="absolute inset-0 text-wite flex items-center justify-center mix-blend-overlay hover:mix-blend-normal">
+            <h2 className="text-3xl font-bold  text-white">{title}</h2>
           </div>
         </div>
         <div className="tags flex gap-2">
@@ -52,9 +52,9 @@ const Project = ({ title, img, badges, description, link, repo }) => {
           >
             Site
           </a>
-          <button href={repo}  class="bg-cyan-50 hover:bg-cyan-100 text-gray-900 font-bold py-2 px-4 rounded" target="_blank"  aria-label={`Link to Git Repo`}>
+          <a href={repo}  class="bg-cyan-50 hover:bg-cyan-100 text-gray-900 font-bold py-2 px-4 rounded" target="_blank"  aria-label={`Link to Git Repo`}>
             Git Repo
-          </button>
+          </a>
         </Modal.Footer>
       </Modal>
     </>

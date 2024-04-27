@@ -10,7 +10,6 @@ import { textToSpans, animation } from "./util/formatting";
 import { DarkThemeToggle } from "flowbite-react";
 
 gsap.registerPlugin(ScrollTrigger);
-
 function App() {
   useEffect(() => {
     textToSpans();
