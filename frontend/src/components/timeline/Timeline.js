@@ -8,11 +8,14 @@ import { faGraduationCap, faBriefcase } from '@fortawesome/free-solid-svg-icons'
 
 const Timeline = () => {
   return (
-    <div id="parent-timeline" className="section-timeline mt-12">
+    <div id="parent-timeline" className="section-timeline mt-24">
       <VerticalTimeline>
         <VerticalTimelineElement
-          className="vertical-timeline-element--education"
-          contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+          className="vertical-timeline-element--education w-10/12 xl:w-full"
+          contentStyle={{
+            background: "rgb(6 182 212 / var(--tw-bg-opacity))",
+            color: "#fff",
+          }}
           date="2022 - present"
           iconClassName="bg-cyan-500"
           textClassName="text-left"
@@ -31,7 +34,7 @@ const Timeline = () => {
         </VerticalTimelineElement>
 
         <VerticalTimelineElement
-          className="vertical-timeline-element--education"
+          className="vertical-timeline-element--education w-10/12 xl:w-full"
           date="2019 - 2022"
           iconClassName="bg-red-500"
           contentStyle={{
