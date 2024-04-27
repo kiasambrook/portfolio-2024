@@ -3,6 +3,8 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGraduationCap, faBriefcase } from '@fortawesome/free-solid-svg-icons'
 
 const Timeline = () => {
   return (
@@ -12,7 +14,9 @@ const Timeline = () => {
           className="vertical-timeline-element--education"
           contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
           date="2022 - present"
-          iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+          iconClassName="bg-cyan-500"
+          textClassName="text-left"
+          icon={<FontAwesomeIcon icon={faBriefcase} />}
         >
           <h3 className="vertical-timeline-element-title  text-xl font-semibold">
             Web Developer
@@ -29,8 +33,13 @@ const Timeline = () => {
         <VerticalTimelineElement
           className="vertical-timeline-element--education"
           date="2019 - 2022"
-          iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-          contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+          iconClassName="bg-red-500"
+          contentStyle={{
+            background: "rgb(240 82 82 / var(--tw-bg-opacity))",
+            color: "#fff",
+          }}
+          textClassName="text-left lg:text-right"
+          icon={<FontAwesomeIcon icon={faGraduationCap} />}
         >
           <h3 className="vertical-timeline-element-title text-xl font-semibold">
             1st Class - BSc Business Information Technology
