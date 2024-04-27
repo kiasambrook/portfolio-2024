@@ -28,7 +28,7 @@ const Banner = () => {
               <p className="whitespace-normal break-words overflow-auto">
                 I am a full stack web developer currently based in Wales. I specialise in PHP, but I like to dabble in JS including React and Typescript too.
               </p>
-              <p onClick={scrollToProjects} className="text-red-500 cursor-pointer link w-full hover:underline" aria-label="See my previous projects.">
+              <button onClick={scrollToProjects} className="text-red-500 cursor-pointer my-3  p-0 link hover:underline" aria-label="See my previous projects.">
                 Check out my existing projects
                 <svg
                   className="inline w-4 h-4 ms-2 rtl:rotate-180 animate-bounce-x"
@@ -45,7 +45,7 @@ const Banner = () => {
                     d="M1 5h12m0 0L9 1m4 4L9 9"
                   />
                 </svg>
-              </p>
+              </button>
             </div>
           </div>
         </div>
