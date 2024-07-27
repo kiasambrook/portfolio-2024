@@ -17,20 +17,20 @@ const ProjectList = () => {
         trigger: container.current,
         start: "top top",
         end: "bottom 300px",
-        pin: left.current, // Change 'pin' to 'true'
+        pin: left.current,
       },
     });
   }, [container, left]);
 
   return (
     <div
-      className="bg-cyan-50 h-min-screen py-32 projects"
+      className="dark:bg-slate-500 bg-white h-min-screen py-32 projects"
       id="projects"
       ref={container}
     >
-      <div className="container text-black flex justify-between">
-        <div id="projects-left" ref={left}>
-          <h3 className="text-4xl font-semibold w-1/4">My Projects</h3>
+      <div className="container flex justify-between">
+        <div id="projects-left" ref={left} className="w-1/4">
+          <h3 className="text-4xl font-semibold">My Projects</h3>
           <p>Check out some of my latest projects (more incoming)...</p>
         </div>
         <div className="projects flex justify-around w-3/4 flex-wrap ">
@@ -42,7 +42,7 @@ const ProjectList = () => {
               { colour: "cyan", text: "React" },
               { colour: "red", text: "Laravel" },
             ]}
-            description="This is my personal portfolio website (the website you are currently on), and I built this site to try build on my frontend and laravel skills. It is still a WIP so check back regularly for any changes (although I'm working on the backend at the moment)!"
+            description="This is my personal portfolio website (the website you are currently on), and I built this site to work on my frontend and laravel skills. It is still a WIP so check back regularly for any changes (although I'm working on the backend at the moment)!"
             link="https://kiasambrook.co.uk"
             repo="https://github.com/kiasambrook/portfolio-2024"
           />
