@@ -51,7 +51,7 @@ const Banner = () => {
         </div>
 
         <div className="right lg:w-0.5">
-          <div className="lg:fixed right-10 mix-blend-difference">
+          <div className="lg:fixed right-10 mix-blend-difference z-40">
             <div className="relative flex lg:flex-col flex-row items-center lg:justify-center mt-4 lg:mt-0">
               <div className="after:block after:bg-gray-400 after:w-[1px] after:h-32 after:mx-auto after:my-2 hidden lg:block"></div>
               <span className="text-gray-400 flex lg:flex-col">
