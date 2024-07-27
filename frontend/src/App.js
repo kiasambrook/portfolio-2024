@@ -8,6 +8,7 @@ import "./App.css";
 import TimelineApp from "./components/timeline/App";
 import { textToSpans, animation } from "./util/formatting";
 import { DarkThemeToggle } from "flowbite-react";
+import Sidebar from "./components/sidebar/App";
 
 gsap.registerPlugin(ScrollTrigger);
 function App() {
@@ -22,6 +23,7 @@ function App() {
       className="text-black bg-slate-200 dark:bg-gray-900 dark:text-white w-full box-border p-0 m-0"
     >
       <DarkThemeToggle className="fixed bottom-2.5 left-2.5 dark:border-cyan-50 border border-gray-900 dark:bg-gray-900 rounded-full z-50" />
+      <Sidebar />
       <Header />
       <ProjectList />
       <TimelineApp />
