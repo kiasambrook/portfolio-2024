@@ -14,7 +14,6 @@ const TimelineElement = (props) => {
   if (props.type == "education") {
     iconBg = "bg-red-500";
     contentBg = "rgb(240 82 82 / var(--tw-bg-opacity))";
-    textPos = "text-left lg:text-right";
     icon = faGraduationCap;
   }
 
