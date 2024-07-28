@@ -7,7 +7,7 @@ import { useThemeMode } from "flowbite-react";
 const Timeline = () => {
   const themeMode = useThemeMode().mode
   return (
-    <div id="parent-timeline" className="section-timeline mt-24 !w-full">
+    <div id="parent-timeline" className="section-timeline mt-24 !w-full !h-full">
       <VerticalTimeline
       lineColor={themeMode == 'dark' ? "white" : "rgb(17 24 39)"}
       >

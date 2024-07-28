@@ -3,7 +3,7 @@ import Timeline from "./Timeline";
 const TimelineApp = () => {
   return (
     <div
-      className="container h-min-screen h-auto pt-32 pb-32 md:pb-0 lg:pb-32 experience flex flex-col xl:items-center w-full text-left xl:text-center"
+      className="container h-min-screen h-auto pt-32 pb-32 md:pb-10 lg:pb-32 experience flex flex-col xl:items-center w-full text-left xl:text-center"
       id="timeline-trigger"
     >
       <div className="lg:text-center w-full xl:w-1/2">
