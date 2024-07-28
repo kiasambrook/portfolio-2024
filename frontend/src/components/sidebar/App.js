@@ -3,7 +3,7 @@ import Linkedin from "./../svgs/linkedin";
 
 const Sidebar = ({ className }) => {
   return (
-    <div className="absolute flex lg:flex-row flex-col py-40 mx-auto lg:mx-40 text-left content-between justify-between">
+    <div className="connect-sidebar absolute flex lg:flex-row flex-col py-40 mx-auto lg:mx-40 text-left content-between justify-between">
       <div className="right lg:w-0.5">
         <div className="lg:fixed right-10 mix-blend-difference z-40">
           <div className="relative flex lg:flex-col flex-row items-center lg:justify-center mt-4 lg:mt-0">

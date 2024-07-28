@@ -9,6 +9,7 @@ import TimelineApp from "./components/timeline/App";
 import { textToSpans, animation } from "./util/formatting";
 import { DarkThemeToggle } from "flowbite-react";
 import Sidebar from "./components/sidebar/App";
+import Contact from "./components/contact/App";
 
 gsap.registerPlugin(ScrollTrigger);
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <Header />
       <ProjectList />
       <TimelineApp />
+      <Contact />
     </div>
   );
 }
