@@ -2,15 +2,11 @@ import Timeline from "./Timeline";
 
 const TimelineApp = () => {
   return (
-    <div className="container h-min-screen h-auto py-32 experience flex flex-col xl:items-center w-full text-left xl:text-center" id="timeline-trigger">
+    <div className="container h-min-screen h-auto pt-32 pb-32 md:pb-0 lg:pb-32 experience flex flex-col xl:items-center w-full text-left xl:text-center" id="timeline-trigger">
       <div className="lg:text-center w-full xl:w-1/2">
         <h3 className="text-4xl font-semibold mb-3">Experiences</h3>
         <p className="">
-          Laborum laborum esse mollit fugiat sint ut aute non nulla sunt aute
-          ad. Exercitation occaecat occaecat voluptate Lorem. Aliqua
-          reprehenderit officia irure incididunt. Aute eu voluptate ex magna
-          cupidatat exercitation. Officia ad non cillum proident nulla nostrud
-          quis ullamco. Dolore ut irure incididunt eiusmod ullamco elit.
+          I have been working as a web developer in the industry since 2022, however, my experience goes back further than that having studied web & software development at university.
         </p>
       </div>
       <Timeline />

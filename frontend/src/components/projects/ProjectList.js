@@ -11,29 +11,32 @@ gsap.registerPlugin(useGSAP);
 const ProjectList = () => {
   const container = useRef();
   const left = useRef();
+  let mm = gsap.matchMedia();
   useGSAP(() => {
-    gsap.to(container.current, {
-      scrollTrigger: {
-        trigger: container.current,
-        start: "top top",
-        end: "bottom 300px",
-        pin: left.current,
-      },
+    mm.add("(min-width: 750px)", () => {
+      gsap.to(container.current, {
+        scrollTrigger: {
+          trigger: container.current,
+          start: "top top",
+          end: "bottom 300px",
+          pin: left.current,
+        },
+      });
     });
   }, [container, left]);
 
   return (
     <div
-      className="dark:bg-slate-500 bg-white h-min-screen py-32 projects"
+      className="dark:bg-slate-500 bg-white h-min-screen w-max-screen py-32 projects"
       id="projects"
       ref={container}
     >
-      <div className="container flex justify-between">
-        <div id="projects-left" ref={left} className="w-1/4">
+      <div className="container flex md:flex-row flex-col justify-between">
+        <div id="projects-left" ref={left} className="lg:w-1/4 md:w-2/4 w-full">
           <h3 className="text-4xl font-semibold">My Projects</h3>
           <p>Check out some of my latest projects (more incoming)...</p>
         </div>
-        <div className="projects flex justify-around w-3/4 flex-wrap ">
+        <div className="projects flex justify-around md:w-2/4 lg:w-3/4 w-full gap-4 flex-wrap ">
           <Project
             title="Portfolio"
             img="./portfolio.png"
@@ -52,6 +55,7 @@ const ProjectList = () => {
             badges={[
               { colour: "blue", text: "TailwindCSS" },
               { colour: "gray", text: "Wordpress" },
+              { colour: "green", text: "PHP" },
             ]}
             description="Newry Wildlife is a Wordpress site that was built to advertise nature walks and workshops that take place in Newry, Northen Ireland. It has an API integration with Eventbrite which pulls down their latest events, and uses a custom post type to create posts on biodioversity. I am very familiar in working with Worpdress, using ACF, and working with custom post types and taxonomies, but, this project also gave me the oppurtunity to delve into Tailwind CSS as I was given freereign on the frontend."
             link="https://newrywildlife.com"
@@ -59,7 +63,7 @@ const ProjectList = () => {
           />
           <Project
             title="Study Digs"
-            img="https://picsum.photos/400/300"
+            img="./study-digs.png"
             badges={[
               { colour: "purple", text: "Bootstrap" },
               { colour: "green", text: "PHP" },

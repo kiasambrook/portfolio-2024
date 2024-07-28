@@ -1,31 +1,40 @@
-import React, { useState } from "react";
-import emailjs from '@emailjs/browser';
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import reCAPTCHA, { ReCAPTCHA } from "react-google-recaptcha";
+import GitHub from "./../svgs/github";
+import Linkedin from "./../svgs/linkedin";
 
 const Contact = ({ className }) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [stateMessage, setStateMessage] = useState(null);
+  const refCaptcha = useRef();
 
   const sendEmail = (e) => {
     e.persist();
     e.preventDefault();
     setIsSubmitting(true);
+    const token = refCaptcha.current.getValue();
+
     emailjs
       .sendForm(
         process.env.REACT_APP_SERVICE_ID,
         process.env.REACT_APP_TEMPLATE_ID,
         e.target,
-        process.env.REACT_APP_PUBLIC_KEY
+        process.env.REACT_APP_PUBLIC_KEY,
+        token
       )
       .then(
         (result) => {
-          setStateMessage('Message sent!');
+          setStateMessage("Message sent!");
           setIsSubmitting(false);
           setTimeout(() => {
             setStateMessage(null);
           }, 5000); // hide message after 5 seconds
         },
         (error) => {
-          setStateMessage("Message cannot be sent, please try again later or reach out via social media");
+          setStateMessage(
+            "Message cannot be sent, please try again later or reach out via social media"
+          );
           setIsSubmitting(false);
           setTimeout(() => {
             setStateMessage(null);
@@ -113,7 +122,29 @@ const Contact = ({ className }) => {
             Submit
           </button>
           {stateMessage && <p>{stateMessage}</p>}
+          <ReCAPTCHA
+            sitekey={process.env.REACT_APP_SITE_KEY}
+            ref={refCaptcha}
+          />
         </form>
+        <div className="socials flex flex-row w-full mt-6">
+          <a
+            href="https://github.com/kiasambrook"
+            aria-label="Visit my GitHub page"
+            target="_blank"
+            className="hover:text-black dark:hover:text-white"
+          >
+            <GitHub className="w-10 h-10" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/kiasambrook"
+            target="_blank"
+            aria-label="Visit my personal Linkedin page"
+            className="hover:text-blue-500"
+          >
+            <Linkedin className="w-10 h-10" />
+          </a>
+        </div>
       </div>
     </div>
   );
