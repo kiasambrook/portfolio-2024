@@ -1,11 +1,16 @@
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import TimelineElement from "./TimelineElement";
+import { Flowbite } from "flowbite-react";
+import { useThemeMode } from "flowbite-react";
 
 const Timeline = () => {
+  const themeMode = useThemeMode().mode
   return (
     <div id="parent-timeline" className="section-timeline mt-24">
-      <VerticalTimeline>
+      <VerticalTimeline
+      lineColor={themeMode == 'dark' ? "white" : "rgb(17 24 39)"}
+      >
         <TimelineElement
           type="work"
           title="Web Developer"

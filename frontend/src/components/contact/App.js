@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { useState } from 'react';
+import React, { useState } from "react";
 import emailjs from '@emailjs/browser';
 
 const Contact = ({ className }) => {

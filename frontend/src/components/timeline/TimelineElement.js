@@ -27,6 +27,7 @@ const TimelineElement = (props) => {
       date={props.date}
       iconClassName={iconBg}
       textClassName={textPos}
+      dateClassName="xl:text-slate-500 dark:text-white text-white"
       icon={<FontAwesomeIcon icon={icon} />}
     >
       <h3 className="vertical-timeline-element-title  text-xl font-semibold">
