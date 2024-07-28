@@ -13,7 +13,7 @@ const scrollToProjects = () => {
 const Banner = () => {
   return (
       <div className="banner flex lg:flex-row flex-col py-40 mx-auto lg:mx-40 text-left content-between justify-between">
-        <div className="left flex flex-wrap flex-col content-start items-start">
+        <div className="left flex flex-wrap flex-col content-start items-start mt-4 md:mt-0">
           <TypeIt as={"h2"}
           className="text-5xl font-black">
             Hi, I'm <span className="text-red-500">Kia</span>...
